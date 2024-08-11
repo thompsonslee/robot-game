@@ -29,4 +29,17 @@ body {
   min-width: 320px;
   min-height: 100vh;
 }
+.grid{
+  display: flex;
+  flex-direction: column;
+}
+.row{
+  display: flex;
+}
+.cell{
+  width: 200px;
+  height: 200px;
+  border: 2px solid green;
+}
+
 
