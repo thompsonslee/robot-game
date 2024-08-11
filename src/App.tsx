@@ -51,7 +51,7 @@ const turn = (direction: Direction, LR: "left" | "right"):Direction => {
   if(LR === "left" && direction === "N") return "NW"
   if(LR === "right" && direction === "NW")return "N"
 
-  const array:Direction[] = ["N","NE","E","ES","S","SW","W","NW"]
+  const array:Direction[] = ["N","NE","E","SE","S","SW","W","NW"]
   const directionIndex = array.findIndex(item => item === direction)
   if(LR === "left")  return array[directionIndex - 1]
   if(LR === "right") return array[directionIndex + 1]
@@ -90,7 +90,9 @@ function App() {
     return () => window.removeEventListener("keydown",keyPressListener)
   },[])
   return (
-    <div>
+    <div className="app">
+      <h1>For Bellroy</h1>
+      <p>Use the Arrow keys </p>
       <Grid robotState={robotState}/>
     </div>
   )

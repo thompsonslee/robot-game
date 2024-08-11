@@ -2,7 +2,7 @@ export type Direction =
      "N"
     |"NE"
     |"E"
-    |"ES"
+    |"SE"
     |"S"
     |"SW"
     |"W"
