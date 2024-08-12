@@ -1,11 +1,13 @@
 import { describe, it, expect } from 'vitest';
-import {render, screen} from "@testing-library/react"
+import {render} from "@testing-library/react"
 import App from "./App";
 
 
 describe('App', () => {
-    it('renders App Component',() => {
-        render(<App />);
-        screen.debug()
+    render(<App />);
+    it('renders 25 cells',() => {
+        const cells = document.querySelectorAll(".cell")
+        console.log(cells)
+        expect(cells.length).toBe(25)
     })
 })
